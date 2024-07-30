@@ -445,7 +445,7 @@ body {
     width: 95%;
     justify-content: space-evenly;
     background-color: #EEEEEE;
-    border: 1px solid #000000;
+    border-top: 1px solid #000000;
     margin: 10px auto;
     margin-top: 20px;
 }
@@ -466,8 +466,8 @@ body {
     margin: 10px auto;
     margin-top: 20px;
     justify-content: space-evenly;
-    background-color: #FFFFFF;
-    border: 1px solid #000000;
+    border-top: 1px solid #000000;
+    background-color: #EEEEEE;
 }
 
 .stack {
@@ -494,6 +494,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    background-color: #FFFFFF;
     margin: 0 auto;
 }
 
@@ -505,25 +506,49 @@ body {
     background-color: #EEEEEE;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 5px 5px #99BEB1;
-    border-left: 1px solid #000000;
-    border-top: 1px solid #000000;
     margin: 5px;
-    border-right: none;
+    border-top: 1px solid #000000;
 }
 
 .stack-img {
     position: relative;
     filter: drop-shadow(10px, 10px, 4px, red);
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 5px;
+}
+
+.tech-class {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.tech-class-single {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5px;
+    margin-top: 2px auto;
+}
+
+.primary-tech-label {
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: #212529;
+    padding: 4px;
+    text-align: center;
+    text-decoration: overline;
 }
 
 .top-tech-label {
     position: relative;
     width: 100%;
     font-family: 'DM Sans', sans-serif;
-    position: relative;
     font-size: 14px;
     color: #212529;
     overflow: hidden;
@@ -563,10 +588,11 @@ body {
 
 .lib-label {
     position: relative;
-    width: 60%;
+    height: fit-content;
+    width: 90%;
     font-family: 'DM Sans', sans-serif;
     position: relative;
-    font-size: 12px;
+    font-size: 11.5px;
     color: #ffffff;
     background-color: #212529;
     overflow: hidden;
@@ -574,6 +600,7 @@ body {
     text-align: center;
     border-bottom: 1px solid #ffffff;
     margin: .5px auto;
+    border-radius: 4px;
 }
 
 #albedo-text-container {
