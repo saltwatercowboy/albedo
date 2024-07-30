@@ -132,11 +132,12 @@ body {
 #article-citations {
     position: fixed;
     right: 0%;
-    background-color: #ffffff;
+    background-color: #EEEEEE;
     color: #000000;
     height: 100vh;
     width: 27%;
     border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
     direction: rtl;
     overflow-y: scroll;
 }
@@ -392,10 +393,14 @@ body {
 .reference-container {
     position: relative;
     display: inline-block;
-    width: 95%;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 20px;
     direction: ltr;
     padding-bottom: 20px;
+    border-left: 3px solid #99BEB1;
+    border-bottom: 1px solid #99BEB1;
+    background-color: #FFFFFF;
 }
 
 .reference-num {
@@ -413,7 +418,7 @@ body {
     position: relative;
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 5px;
     text-align: justify;
 }
@@ -441,6 +446,66 @@ body {
     margin: 0 auto;
     margin-top: 20px;
     justify-content: space-evenly;
+}
+
+.stack {
+    display: inline-block; 
+    width: 60px; 
+    height: 60px; 
+    background: url('../img/stack.png') 50% 135% no-repeat;
+    background-size: 75%; 
+}
+
+.stack-icons-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.icons-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 5px;
+    background-color: #EEEEEE;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px #99BEB1;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.icons-box img {
+    position: relative;
+    padding: 3px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.libraries-list {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.lib-label {
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+    font-size: 12px;
+    color: #212529;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    padding: 4px;
+    text-align: center;
+    border-left: 1px solid #99BEB1;
+    border-bottom: 1px solid #99BEB1;
+    border-radius: 2px;
+    margin: 2px auto;
 }
 
 #albedo-text-container {
@@ -492,7 +557,7 @@ body {
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        min-width: 90%;
+        width: 100%;
     }
 
     .reference-container {
