@@ -103,6 +103,7 @@ body {
     flex-wrap: nowrap;
     height: 100%;
     background-color: #FFFFFF;
+    padding-right: 5px;
 }
 
 @media (max-width: 1337px) {
@@ -135,7 +136,8 @@ body {
     width: 30%;
     height: 120vh;
     border-left: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #intro-card {
@@ -159,7 +161,7 @@ body {
 
 .intro-item > div {
     position: relative;
-    width: 98%;
+    width: 100%;
     color: #FFFFFF;
     margin: 0 auto;
 }
@@ -171,6 +173,8 @@ body {
     font-family: "Merriweather", sans-serif;
     font-size: 26px;
     padding: 5px;
+    border-top: 1px solid #000000;
+    margin-top: 20px;
 }
 
 #article-citations {
@@ -209,28 +213,19 @@ body {
     background-color: #000000;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='3' height='3' viewBox='0 0 55 55' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ctext x='10' y='10' fill='whitesmoke'%3ealbedo%3c/text%3e%3c/svg%3e ");
     transition: .5s ease;
-
-}
-
-.article-container:hover .quote-scroll {
-    border-bottom: 2px solid rgb(255, 0, 0);
-    border-right: 2px solid rgb(255, 0, 0);
-    background-color: #000000;
-    color: #FFFFFF;
 }
 
 .article-container:hover {
     background-color: #000000;
     color: #FFFFFF;
     margin-left: 10px;
-    border-left: 5px solid rgb(255, 0, 0);
+    border-left: 5px solid #99BEB1;
 }
-
 
 .quote-scroll {
     display: flex;
     position: relative;
-    min-width: 100%;
+    width: 100%;
     line-height: 160%;
     font-family: "Merriweather", sans-serif;
     font-optical-sizing: auto;
@@ -245,6 +240,13 @@ body {
     border-right: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
     transition: .25s ease;
+}
+
+.article-container:hover .quote-scroll {
+    border-bottom: 2px solid #99BEB1;
+    border-right: 2px solid #99BEB1;
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .quote-subheading {
@@ -273,6 +275,7 @@ body {
     font-size: 12px;
     color: #000000;
     text-align: end;
+    margin-right: 4px;
 }
 
 .blog-article-container {
@@ -504,9 +507,7 @@ body {
 
 .stack-main {
     position: relative;
-    width: 95%;
-    margin: 10px auto;
-    margin-top: 20px;
+    width: 100%;
     justify-content: space-evenly;
     border-top: 1px solid #000000;
 }
@@ -539,56 +540,76 @@ body {
     display: inline-block; 
     width: 40px; 
     height: 40px; 
-    background: url('../img/stack.png') 50% 135% no-repeat;
+    background: url('../img/stack.png') 50% 130% no-repeat;
     background-size: 75%; 
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .stack-text {
+    position: relative;
+    width: 100%;
+    height: fit-content;
     font-family: "Merriweather", sans-serif;
     font-optical-sizing: auto;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 400;
     text-align: left;
     width: 90%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+.stack-text #text{
+    position: relative;
+    height: fit-content;
+    top: 0%;
+}
+
+.funnel-triangle {
+    position: relative;
+    width: 100%;
+    border-color: transparent transparent #EEEEEE transparent; 
+    border: 1px solid #000000;
+    margin-bottom: 0px;
+    background-color: #FFFFFF;
+  }
 
 .stack-icons-container {
     position: relative;
     display: flex;
+    flex-direction: row;
     width: 100%;
     justify-content: space-around;
-    background-color: #FFFFFF;
-    margin: 0 auto;
 }
 
 .icons-box {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: 70%;
+    width: 33%;
+    height: 100%;
     align-items: center;
     justify-content: space-evenly;
     margin: 5px;
-    margin-top: -1px;
+    margin-top: 0px;
     z-index: 2;
-    background-color: #EEEEEE;
+    border: 1px solid #000000;
 }
 
 .stack-img {
     position: relative;
     filter: drop-shadow(10px, 10px, 4px, red);
     margin: 5px;
+    padding: 4px;
 }
 
 .tech-class {
     position: relative;
     display: flex;
     width: 100%;
-    justify-content: space-around;
-    margin: 0 auto;
+    margin: 12px;
     margin-top: 0px;
 }
 
@@ -599,19 +620,24 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    margin: 15px;
+    margin: 12px;
     margin-top: 2px auto;
+    border-radius: 4px;
+    background-color: #FFFFFF;
 }
 
 .primary-tech-label {
     position: relative;
     width: 100%;
     font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    color: #212529;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
     padding: 4px;
     text-align: center;
-    text-decoration: underline;
+    background-color: #212529;
+    border-bottom: 1px solid #000000;
+    margin-top: 0px;
 }
 
 .secondary-tech-label {
@@ -621,6 +647,8 @@ body {
     font-size: 14px;
     color: #212529;
     padding: 4px;
+    padding-bottom: 0px;
+    margin-top: 2px;
     text-align: center;
 }
 
@@ -640,21 +668,19 @@ body {
 .splitter-tech-label {
     position: relative;
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    background-color: #212529;
-    color: #FFFFFF;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 24px;
-    margin-left: 20px;
-    margin-right: 20px;
+    font-size: 12px;
+    color: #212529;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 4px;
 }
 
 .stack-separator {
     position: relative;
-    margin-top: -10px;
     z-index: 1;
 }
 
@@ -664,7 +690,6 @@ body {
     width: 100%;
     flex-wrap: wrap;
     margin: 10px;
-    padding: 5px;
 }
 
 .libraries-list-secondary {
@@ -689,7 +714,7 @@ body {
 .lib-label {
     position: relative;
     height: fit-content;
-    width: 90%;
+    width: fit-content;
     font-family: 'DM Sans', sans-serif;
     position: relative;
     font-size: 11.5px;
@@ -698,8 +723,7 @@ body {
     overflow: hidden;
     padding: 4px;
     text-align: center;
-    border-bottom: 1px solid #ffffff;
-    margin: .5px auto;
+    margin: 2px auto;
     border-radius: 4px;
 }
 
@@ -729,7 +753,7 @@ body {
 #albedo-text {
     font-family: "Merriweather", sans-serif;
     font-optical-sizing: auto;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 225%;
     text-align: left;
@@ -775,6 +799,19 @@ body {
     .article-text {
         font-size: 12px;
     }
+
+    .stack-icons-container {
+        flex-direction: column;
+    }
+
+    .icons-box {
+        width: 98%;
+    }
+
+    .stack-img {
+        width: 25%;
+        height: 25%;
+    }
 }
 
 h1 {
@@ -814,6 +851,16 @@ h2 {
     grid-template-rows: .2fr 1fr;
     transition: .5s ease;
     padding: 0px;
+}
+
+.link-icon {
+    position: relative;
+    float: right - 20px;
+    margin-left: 250px;
+    transition: .5s ease;
+    height: 66%;
+    width: 48px;
+    opacity: 0%;
 }
 
 #bg-bottom-flag {
@@ -965,6 +1012,11 @@ h2 {
         margin-left: 10px;
         background-color: #FFFFFF;
         border-left: 5px solid rgb(52, 56, 55);
+    }
+
+    #bg-bottom:hover .link-icon {
+        opacity: 100%;
+        margin-left: 260px;
     }
 
     #bg-bottom:hover > * {
