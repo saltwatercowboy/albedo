@@ -114,7 +114,6 @@ body {
 
 #article-top {
     position: relative;
-    display: flex;
     max-width: 72.5%;
     max-height: 100vh;
     flex-wrap: wrap;
@@ -124,7 +123,7 @@ body {
 
 .article-item {
     position: relative;
-    overflow: scroll;
+    overflow: visible;
 }
 
 #bg-top > * {
@@ -195,12 +194,13 @@ body {
 
 .back-text {
     position: relative;
-    width: 100%;
+    min-width: 100%;
     background-color: #000000;
     color: #FFFFFF;
     font-family: "Merriweather", sans-serif;
     font-size: 16px;
-    padding: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
     margin-bottom: 10px;
 }
 
@@ -280,14 +280,15 @@ body {
     font-size: 12px;
     color: #000000;
     text-align: end;
-    margin-right: 4px;
+    margin-right: 12px;
+    margin-bottom: 12px;
 }
 
 .blog-article-container {
     position: relative;
     min-height: 33%;
     max-height: 100%;
-    width: 100%;
+    width: 95%;
     background-color: #000000;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='3' height='3' viewBox='0 0 55 55' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ctext x='10' y='10' fill='whitesmoke'%3ealbedo%3c/text%3e%3c/svg%3e ");
     transition: .5s ease;
@@ -349,7 +350,7 @@ body {
 .article-text {
     position: relative;
     padding: 30px;
-    padding-right: 50px;
+    padding-right: 10px;
     font-family: "Merriweather", sans-serif;
     font-size: 14px;
     line-height: 200%;
@@ -494,10 +495,10 @@ body {
 
 #desc-index {
     position: relative;
-    width: 95%;
+    width: 100%;
     height: fit-content;
     justify-content: space-evenly;
-    border: 1px solid #000000;
+    border-top: 1px solid #000000;
     margin: 20px auto;
     margin-top: 20px;
 }
@@ -564,6 +565,7 @@ body {
     height: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .stack-text #text{
@@ -801,7 +803,8 @@ body {
 
 @media (max-width: 748px) {
     .article-text {
-        font-size: 12px;
+        font-size: 14px;
+        padding: 5px;
     }
 
     .stack-icons-container {
