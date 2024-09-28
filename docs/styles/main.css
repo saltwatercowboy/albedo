@@ -15,9 +15,10 @@ body {
     display: grid;
     grid-template-columns: 150px 1fr 3fr;
     grid-template-rows: 2fr;
-    background-color: #ffffff;
     border-top: 1px solid #000000;
     z-index: 0;
+    background-image: url("../img/subtle-dots.png");
+    background-repeat: repeat-x repeat-y;
 }
 
 
@@ -34,6 +35,8 @@ body {
 
 .intra-link {
     text-decoration: none;
+    color: #ffffff;
+
 }
 
 .intra-link:hover {
@@ -101,7 +104,6 @@ body {
     grid-row: 1 / 5;
     display: flex;
     height: 100%;
-    background-color: #FFFFFF;
 }
 
 #article-top {
@@ -120,7 +122,6 @@ body {
 
 #bg-top > * {
     position: relative;
-    background-color: #FFFFFF;
     color: #000000;
     width: 30%;
     height: fit-content;
@@ -140,7 +141,6 @@ body {
 
 #intro-card > * {
     position: relative;
-    background-color: #FFFFFF;
     color: #000000;
     width: 100%;
     padding-top: 15px;
@@ -158,31 +158,39 @@ body {
     min-height: 100%;
     color: #FFFFFF;
     margin: 0 auto;
-    padding-bottom: 5px;
 }
 
 .top-items-bg {
     background-color: #212529;
+    padding-bottom: 5px;
 }
 
 .intro-item-titles-projects {
     position: relative;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #ffffff;
     font-family: "DM Sans", sans-serif;
     font-size: 26px;
-    padding: 5px;
+    background-image: url("../img/subtle-dots.png") ;
+    background-repeat: repeat-x repeat-y;
+    border-top: 2px solid #99BEB1;
+    border-right: 2px solid #99BEB1;
+    border: 1px solid #99BEB1;
+}
+
+.intro-item-titles-projects-text {
+    background-color: #212529;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .intro-item-titles {
     position: relative;
-    background-color: #FFFFFF;
     color: #000000;
     font-family: "DM Sans", sans-serif;
     font-size: 26px;
-    padding: 5px;
-    border-top: 1px solid #000000;
     padding-top: 20px;
+    
 }
 
 #article-citations {
@@ -213,6 +221,10 @@ body {
 .back-text:hover {
     border-bottom: 5px solid #99BEB1;
     margin-bottom: 5px;
+}
+
+.article {
+    padding-top: 14px;
 }
 
 .article-container {
@@ -287,7 +299,6 @@ body {
     text-align: end;
     padding-right: 12px;
     padding-bottom: 12px;
-    background-color: #FFFFFF;
 }
 
 .blog-article-container {
@@ -518,6 +529,10 @@ body {
     -5px 5px rgba(255, 0, 0, 0.25),
     5px -5px rgba(0, 30, 255, 0.25),
     0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 0, 0);
+}
+
+#desc-top {
+
 }
 
 #desc-index {
@@ -934,7 +949,6 @@ body {
     }
 
     .intro-item {
-        display: flex;
         justify-content: space-between;
         width: 66vw;
     }
