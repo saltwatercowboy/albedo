@@ -419,6 +419,33 @@ body {
     padding-top: 25px;
 }
 
+@media (max-width:1144px) {
+    
+    #article-top {
+        min-width: 100%;
+    }
+
+    #article-citations {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .reference-container {
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 748px) {
+    .article-text {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+}
+
 @media (max-width: 750px) {
 
     #bg-top {
