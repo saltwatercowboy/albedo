@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>albedo</title>
+
+        <meta name="url" property="og:url" content="https://saltwatercowboy.github.io/albedo/pages/article-29-09-24.html" />
+        <meta name="type" property="og:type" content="article" />
+        <meta name="title" property="og:title" content="Alien Verisimilitude - the Illusion of Intelligence in Halo CE’s Campaign AI" />
+        <meta name="description" property="og:description" content="Leader dead, run away!"/>
+        <meta name="image" property="og:image" content="https://saltwatercowboy.github.io/albedo/img/ce-screenshot.png" />
+        <meta name="author" content="saltwatercowboy" />
+        <meta name="revised" content="Saturday, October 26th, 2024, 17:45">
+
+        <link rel="icon" type="image/x-icon" href="../img/alb-favicon.ico">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+20+Charted&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+20+Charted&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <script>$('body').on('touchstart', function() {});</script>
+    </head>
+    <body>
+            <div id="article-top" tabindex="0">
+                    
+                    <div class="article-item">
+                        <a href="blog.html">
+                            <div class="back-text">
+                                back to blog
+                            </div>
+                        </a>
+                        <div>
+                            <div class="blog-article-container">
+                                <span class="article-heading">Alien Verisimilitude - the Illusion of Intelligence in Halo CE’s Campaign AI</span>
+                                <div class="article-date">26 10 24</div>
+                                <div class="article-text">
+                                    <div class="top-img-container">
+                                        <img class="top-img" src="../img/ce-screenshot.png">
+                                        <div class="top-img-subheading"><i>Leader dead, run away!</i></div>
+                                    </div>
+                                    Ask a software developer how they became interested in computers - my bet is that you’ll see certain answers pop up more often than others. In my experience, these are:
+                                    <div class="bullet-list">
+                                        <p><b>1. </b>I had a wonderful teacher</p>
+                                        <p><b>2. </b>A family member introduced me</p>
+                                        <p><b>3. </b>I played video games and wanted to make a gun that shoots hot dogs</p>
+                                    </div>
+                                    <p>I fall into camps 1 and 3. 
+                                    My teacher was someone by the name of Eric Dutt[1]; he taught (at that early grade school level) ‘Science’, and gave me old, busted desktop computers to take home and pull apart. I remember thinking that the motherboards looked like little cities. 
+                                    In respect to games, and like many kids growing up in the 2000s, I played Halo CE semi-religiously. I remember preferring the campaign, but my older siblings were much more interested in taking advantage of my less-developed motor skills in local multiplayer.</p>
+                                    <br><br>
+                                    Upon getting my first computer - a MacBook, ostensibly for schoolwork - I was fairly limited in the games I could play. But I could run Halo[2] - and, following on from the troubleshooting needed to get it up and running, I began to lurk online communities dedicated to modifying the game. I started with hexadecimal editing, then began poking around in decompiled game files with community-developed modding tools. Eventually, I came across a dialect of Lisp known as BlamScript[3] - and I started to learn my first programming language. The rest is history. 
+                                    <br><br>
+                                    To this day, I’m impressed with how erudite, creative, and fundamentally sound the approach Bungie employed was in realising a memorable experience. The engine (so to speak) of this experience lies in their campaign AI.
+                                    <br><br>
+                                    <div class="article-section-heading">Pulp, Marrow, Design</div>
+                                    <br>
+                                    According to Bungie’s own designers[4], there were three key goals: enemies had to be unpredictable (to create novel experiences), intelligible (by broadcasting their intent to the player), and interactive (by acting believably and responsively to the player’s actions in the world space). 
+                                    <br><br>
+                                    These goals were implemented in epicycles over the course of a mission via encounters. These can be thought of as a more fluid extension of encounters in Dungeons and Dragons where the player (+AI allies) meets and fights group of enemies in the world, and each encounter orbited around the player’s approach to these enemies. For example, the player might be directed to reach an objective with an interactive scripted object which advances the level state to the next objective. A group of enemies is spawned to defend it, and the encounter begins when the player reaches the point of engagement with this group.
+                                    <br><br>
+                                    This is the fundamental basis of the replayability they attained. The notion that they ‘defend’ this space is illusory; until disproven, the player assumes that the enemy knows the same things they do. But there is no higher-level ontological concept of ‘defend this object’ for squads of enemies: there are thresholds for group attack and retreat behaviours, physical bounds for the enemy actors to operate within, and individual actor responses dictated by their internal state.                                     
+                                    <br><br>
+                                    The illusion of intelligence in this combination creates verisimilitude[5] for the player: a gamified, satisfying, and self-consistent experience of a world. This world is, of course, a far-future pulpy space opera where you play as a tank-green supersoldier brainwashed from childhood to be the perfect killing machine - but the point is a fun and (again) self-consistent world, not a real one.
+                                    <br><br>
+                                    <div class="article-section-heading">'Racial Personalities', Individual Knowledge Models, and Intelligibility</div>
+                                    <br>
+                                    Here are three actor voice clips from the game, each < 3s long, each corresponding to a specific behaviour by an individual actor (the ‘elite’ enemy):
+                                    <br><br>
+                                    <audio controls>
+                                        <source src="https://halo.bungie.org/misc/dialogue/elites/elite1.mp3" type="audio/mp3">
+                                    </audio>
+                                    <br>
+                                    <audio controls>
+                                        <source src="https://halo.bungie.org/misc/dialogue/elites/elite.pissed.01.mp3" type="audio/mp3">
+                                        <label>elite</label>
+                                    </audio>
+                                    <br>
+                                    <audio controls>
+                                        <source src="https://halo.bungie.org/misc/dialogue/elites/elitelaugh2.mp3" type="audio/mp3">
+                                        <label>elite</label>
+                                    </audio>
+                                    <br><br>
+                                    Even without the filenames (e.g., "elite.pissed.01.mp3"), they parse pretty clearly. The first signifies some anger, then an engagement of the player; the second, extreme anger (accompanied in-game by an animation where the enemy shakes its head in rage, then charges the player); the third, mocking laughter after defeating the player (in the latter, they sometimes shoot your bloodied, supine corpse as well).
+                                    <br><br>
+                                    These represent aspects of the ‘racial personality’ of an elite actor. They’re confident, dangerous, and serve as leaders for the other types, or races, of the enemies. If this isn’t clear, here’s what a ‘grunt’ actor often says when you kill the elite leading the squad:
+                                    <br><br>
+                                    By hammering home the personalities of each enemy type with auditory feedback - and coupling them with animations - the player knows exactly what the enemy is thinking. Just as important, this unambiguous feedback means player can learn and develop a degree of skill in approaching them.
+                                    <br><br>
+                                    Supporting this was Bungie’s concept of an individual knowledge model. They wanted AI to know things about the world the same way that players did - i.e., through sight and sound. Enemies do not have omniscient knowledge of where the player is. They react to shots, explosions, comrade deaths, etc. They can also be fooled in a primitive capacity - shoot over in the corner while out of sight, they’ll examine where the projectile landed. Disappear behind cover, they’ll look for you where they saw you disappear - meaning you can circle around and sneak up behind them. 
+                                    <br><br>
+                                    <div class="top-img-container">
+                                        <img class="top-img" src="../img/actor-anatomy.png">
+                                        <div class="top-img-subheading"><i>Control-flow diagram of an actor</i></div>
+                                    </div>
+                                    <br>
+                                    <div class="article-section-heading">Supporting Interactivity</div>
+                                    <br>
+                                    What’s really remarkable is that Bungie attained this using a very limited CPU budget. The original Xbox relied on a 733MHz single core Intel Pentium processor for its CPU. From this, only 15% of the CPU budget was reserved for AI behaviour. They had to support 20-25 actors, up to 5 vehicles, and AI actor responses to two players when in co-operative mode. The margins were fairly thin, even if the Xbox’s specs blew other comparable systems of the time out of the water.
+                                    <br><br>
+                                    This limited budget meant Bungie had to make some creative decisions. One method was how they managed the actors’ internal states. By implementing analog (i.e., continuous signals as opposed to non-continuous digital) variables that the AI based their decisions around, they could keep encounters fresh, interactive, and undpredictable. For example, they tracked two variables (among others) in this way: player distance and player health. 
+                                    <br><br>
+                                    Each actor type then had hard-coded behaviours they may, semi-randomly, choose to engage in based on these variables: elites might charge a low-health player in cover at close distance, or they might throw a grenade if high health and in cover at medium distance. On higher difficulties, one actor throwing a grenade might cause other actors to do the same - meaning a greater challenge as the player must leave cover to avoid death.
+                                    <br><br>
+                                    <div class="top-img-container">
+                                        <img class="top-img" src="../img/decision-logic.png">
+                                        <div class="top-img-subheading"><i>Actor decision logic</i></div>
+                                    </div>
+                                    <br>
+                                    From the player’s perspective, this is <i>smart</i>. Not only is it smart, it’s efficient and straightforward to work with as a level designer. These behaviours are so well-implemented and robust that, if you import a .actor file (and its needed dependencies) from the campaign and spawn it on a multiplayer map[6], it will function more or less exactly as it should in combat. 
+                                    <br><br>
+                                    There are missing aspects like patrol routes, but these are hard-coded into the level design and can be replicated. A system like this distributes the work needed when telling a linear story, meaning that interactive and emergent behaviours can be staples of encounters in what is still a closed, carefully curated world.
+                                    <br><br>
+                                    <div class="article-section-heading">Why Halo?</div>
+                                    <br>
+                                    I imagine that, to a game designer, I’m probably not saying anything totally unexpected. For others, I hope I've illuminated what I see as an under-acknowledged step up in mainstream enemy AI design. Much has been made of the AI in the F.E.A.R. games for the same reason - and everyone knows how important Halo was on the whole. But I think certain aspects have remained underappreciated.
+                                    <br><br>
+                                    I’d liken it to watching Ridley Scott’s <i>Alien</i> or <i>Aliens</i>. At times, they appear a little predictable - but this is because they <i>invented</i> these tropes. You could say the same thing about Steven Spielberg’s films. Some things are popular because, perhaps emptily, they are calculated to follow on from what is popular: some things become popular because they are so good that they can’t be ignored. Halo CE is a combination of these factors. It was created by a studio just hitting its true golden period (not to sniff at Myth or Marathon - they’re excellent games for their time) and had the advantage of Microsoft’s sponsorship as the flagship title for the original Xbox. 
+                                    <br><br>
+                                    More haughtily, what I'm trying to communicate is something akin to what I felt reading Douglas Hofstadter’s characterisation of the Lisp interpreter as a ‘genie’ in a 1983 Scientific American article[7]:
+                                    <div class="bullet-list">
+                                        <p>
+                                            Let us now move on to the way Lisp really works. One of the most appealing features of Lisp is that it is interactive, as contrasted with most other higher-level languages, which are noninteractive. What this means is the following. When you want to program in Lisp, you sit down at a terminal connected to a computer and you type the word "lisp" (or words to that effect). The next thing you will see on your screen is a so-called "prompt" - a characteristic symbol such as an arrow or asterisk. I like to think of this prompt as a greeting spoken by a special "Lisp genie", bowing low and saying to you, "Your wish is my command - and now, what is your next wish?" The genie then waits for you to type something to it. This genie is usually referred to as the Lisp interpreter, and it will do anything you want but you have to take great care in expressing your desires precisely, otherwise you may reap some disastrous effects.
+                                        </p>
+                                    </div>
+                                    This is quaint to any modern software engineer and must be placed in context. 
+                                    <br><br>
+                                    It was somewhat mystical, at the time, to have this experience - even if it has since become run-of-the-mill. This iceberg of development and change in software is reflected more visibly and understandably in games. It's all "standing on the shoulders of giants" - but with the abstraction of higher-level languages and the implicit knowledge, the implicit skill of designers against an industry that's grown 100x over since 2001, these giants can become largely invisible. 
+                                    
+                                    <div class="bullet-list">
+                                        <p>
+                                            Much of the information in this article came from a <a href="https://www.youtube.com/watch?v=xp468IY99ag">lecture delivered by a couple of Bungie staff members at GDC 2002</a>. If you’d like to know more, I’d encourage you to give it a watch for a deeper examination of the concepts I’ve referenced here.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quote-attrib">halo, halo ce, combat evolved, blamscript, haloscript, lisp, games, ai</div>
+                        </div>
+                    </div>
+                <div id="article-citations">
+                    <div id="desc-main">
+                        <div class="reference-container">
+                            <span class="reference-num">1</span>
+                            <div class="reference-text">
+                                Eric (still Mr. Dutt to me) passed away in 2007. I was his pupil at the time. He was a kind, passionate teacher that changed a lot of kids' lives for the better. <br><a href="https://www.bespokearchitecture.com/p-s-6-eric-dutt-eco-center/">https://www.bespokearchitecture.com/p-s-6-eric-dutt-eco-center/</a>
+                            </div>
+                        </div>
+                        <div class="reference-container">
+                            <span class="reference-num">2</span>
+                            <div class="reference-text">
+                                Before Bungie partnered with Microsoft, Halo was being developed as an RTS for the Mac.
+                            </div> 
+                        </div>
+                        <div class="reference-container">
+                            <span class="reference-num">3</span>
+                            <div class="reference-text">
+                                Used by Bungie for scripting in the Halo games. Also known as HaloScript.
+                            </div>
+                        </div>
+                        <div class="reference-container">
+                            <span class="reference-num">4</span>
+                            <div class="reference-text">
+                                <a href="https://www.youtube.com/watch?&v=xp468IY99ag">https://www.youtube.com/watch?&v=xp468IY99ag</a>
+                            </div>
+                        </div>
+                        <div class="reference-container">
+                            <span class="reference-num">5</span>
+                            <div class="reference-text">
+                                Verisimilitude (n.): <i>The appearance of being true or real.</i>
+                            </div>
+                        </div>
+                        <div class="reference-container">
+                            <span class="reference-num">6</span>
+                            <div class="reference-text">
+                                IIRC, this had to be done by spawning an invisible vehicle, spawning the actors in its seats, flipping it so they fell out, then despawning the vehicle.
+                            </div>
+                        </div>
+                        <div class="reference-container">
+                            <span class="reference-num">7</span>
+                            <div class="reference-text">
+                                <a href="https://gist.github.com/jackrusher/5139396">Republished by Jack Rusher on Github.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
