@@ -143,7 +143,9 @@ body {
 
 .intro-item {
     position: relative;
-    padding: 50px;
+    padding: 32px;
+    padding-top: 0px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #000000;
 }
 
@@ -237,8 +239,8 @@ body {
 
 .article-container:hover .quote-scroll {
     border-top: 2px solid #99BEB1;
-    background-color: #000000;
-    color: #FFFFFF;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .article-container:hover .quote-attrib span {
@@ -256,11 +258,12 @@ body {
     font-size: 18px;
     padding-left: .5rem;
     font-style: normal;
-    background-color: transparent;
-    color: #000000;
-    border-top: 2px solid #000000;
+    background-color: #212529;
+    color: #ffffff;
+    border-top: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
+    border-radius: 4px;
 }
 
 .quote-subheading {
@@ -422,6 +425,7 @@ body {
 #desc-top {
     padding: 50px;
     padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 @media (max-width:1144px) {
@@ -558,10 +562,11 @@ body {
 
 #desc-index {
     position: relative;
-    width: 100%;
+    float: right;
     height: fit-content;
     justify-content: space-evenly;
     margin: 20px auto;
+    margin-bottom: 0px;
 }
 
 #desc-main {
@@ -573,6 +578,13 @@ body {
 }
 
 .stack-main {
+    position: relative;
+    width: 100%;
+    justify-content: space-evenly;
+    border-top: 1px solid #000000;
+}
+
+#stack-main-index {
     position: relative;
     width: 100%;
     justify-content: space-evenly;
@@ -699,6 +711,7 @@ body {
     width: fit-content;
     top: 0%;
     text-align: bottom;
+    margin-left: 15px;
 }
 
 .funnel-triangle {
@@ -904,7 +917,7 @@ body {
 
 .albedo-text-container {
     position: relative;
-    display: inline-block;
+    float: right;
     margin: 0 auto;
     border-radius: 4px;
     padding-top: 5px;
@@ -954,6 +967,62 @@ body {
     padding-right: 10px;
     padding-left: 10px;
     box-shadow: 5px 5px 0px -2px rgba(0,0,0,0.75);
+    float: left;
+}
+
+#albedo-contact {
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 225%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #EEEEEE;
+    border-radius: 4px;
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-shadow: 5px 5px 0px -2px rgba(0,0,0,0.75);
+    max-width: fit-content;
+    float: right;
+    margin-left: 15px;
+    display: inline;
+}
+
+#desc-index-contact {
+    position: relative;
+    float: left;
+    height: fit-content;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    margin-bottom: 0px;
+}
+
+.albedo-text-container-contact {
+    position: relative;
+    float: left;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding-top: 5px;
+}
+
+#albedo-contact-page {
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 225%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #EEEEEE;
+    border-radius: 4px;
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-shadow: 5px 5px 0px -2px rgba(0,0,0,0.75);
+    max-width: fit-content;
+    float: left;
 }
 
 h1 {
