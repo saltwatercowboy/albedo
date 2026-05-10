@@ -303,6 +303,40 @@ body {
     padding-bottom: 12px;
 }
 
+.quote-attrib-l {
+    position: relative;
+    float: left;
+    min-width: 0%;
+    max-width: 50%;
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 10px;
+    color: #000000;
+    text-align: start;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+    line-height: 100%;
+}
+
+.quote-attrib-r {
+    position: relative;
+    float: right;
+    min-width: 0%;
+    max-width: 50%;
+    font-family: "JetBrains Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 10px;
+    color: #000000;
+    text-align: right;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    line-height: 100%;
+}
+
 .blog-article-container {
     position: relative;
     min-height: 33%;
@@ -387,6 +421,29 @@ body {
     margin-left: none;
 }
 
+.bullet-list-imgs {
+    width: 90%;
+    margin: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-left: 4px soimgslid #99BEB1;
+}
+
+.bullet-list-imgs > p {
+    border-bottom: 1px solid #99BEB1;
+    width: fit-content;
+    background-color: #EEEEEE;
+    padding: 5px;
+    margin-left: none;
+}
+
+.bullet-list-imgs > div {
+    width: fit-content;
+    background-color: #EEEEEE;
+    padding: 5px;
+    margin-left: none;
+}
+
 .top-img-container {
     position: relative;
     display: block;
@@ -403,6 +460,17 @@ body {
     border-radius: 4px;
     margin: 0 auto;
     margin-top: 20px;
+    border-bottom: 2px solid #99BEB1;
+}
+
+.album-img {
+    display: flex;
+    position: relative;
+    width: 100%;
+    border: 1px solid #99BEB1;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 4px;
     border-bottom: 2px solid #99BEB1;
 }
 
