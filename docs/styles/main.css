@@ -119,14 +119,6 @@ body {
     background-color: #FFFFFF;
 }
 
-.article-item {
-    position: relative;
-    overflow: visible;
-}
-
-.article-item > div {
-    background-color: transparent;
-}
 
 #intro-card {
     position: relative;
@@ -138,7 +130,7 @@ body {
     position: relative;
     color: #000000;
     padding-top: 15px;
-    min-height: 50vh;
+    min-height: 25vh;
 }
 
 .intro-item {
@@ -168,14 +160,13 @@ body {
     font-family: "JetBrains Mono", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 24px;
     background-repeat: repeat-x repeat-y;
     border-bottom: none;
 }
 
 .intro-item-titles-projects-text {
     color: #000000;
-    text-decoration: underline 2px solid;
     width: fit-content;
 }
 
@@ -185,8 +176,8 @@ body {
     font-family: "JetBrains Mono", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 18px;
-    padding-top: 20px;
+    font-size: 24px;
+    padding-top: 0px;
     
 }
 
@@ -224,29 +215,6 @@ body {
     padding-top: 14px;
 }
 
-.article-container {
-    position: relative;
-    min-height: 33%;
-    max-height: 100%;
-    border-left: 5px solid #FFFFFF;
-    border-top: 1px solid #FFFFFF;
-    margin-left: -5px;
-}
-
-.article-container:hover {
-    color: #000000;
-}
-
-.article-container:hover .quote-scroll {
-    border-top: 2px solid #99BEB1;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.article-container:hover .quote-attrib span {
-    border-bottom: 1px solid #99BEB1;
-}
-
 .quote-scroll {
     display: flex;
     position: relative;
@@ -255,12 +223,12 @@ body {
     font-family: "JetBrains Mono", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     padding-left: .5rem;
     font-style: normal;
-    background-color: #212529;
-    color: #ffffff;
-    border-top: 2px solid #ffffff;
+    background-color: #ffffff;
+    color: #212529;
+    border-top: 1px solid #212529;
     border-right: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
     border-radius: 4px;
@@ -275,19 +243,78 @@ body {
     font-size: 12px;
     text-align: start;
     color: #000000;
-    padding: 5px;
+    padding-top: 10px;
     padding-left: 20px;
+    opacity: 0;
+    transform: translateY(6px);
+    color: #212529;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.quote-subheading > * {
+    position: relative;
+    min-height: 20%;
+    font-size: 14px;
+}
+
+.article-container {
+    position: relative;
+    overflow: hidden;
+
+    min-height: fit-content;
+    max-height: 100%;
+
+    padding-bottom: 0.5rem;
+    z-index: 1;
+    border: 1px solid #FFFFFF;
+    border-bottom-left-radius: 25%;
+    border-top-left-radius: 6px;
+
+    background-color: #ffffff;
+}
+
+/* animated fill bar */
+.article-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform 0.5s cubic-bezier(0.4, 2, 0.4, 1);
+
+    z-index: -1;
+}
+
+/* fill entire width on hover */
+.article-container:hover::before {
+    transform: scaleX(1);
+}
+
+.article-container:hover {
+    color: #000000;
+    background-color: #EFF6EE;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .quote-date {
     position: relative;
     min-height: 20%;
     font-family: "JetBrains Mono", serif;
-    color: #000000;
+    color: #212529;
     font-size: 10px;
-    text-align: end;
     padding: 5px;
+    padding-bottom: 5px;
     padding-right: 15px;
+    transform: translateY(6px);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
 }
 
 .quote-attrib {
@@ -297,8 +324,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 10px;
-    color: #000000;
-    text-align: end;
+    color: #ffffff;
+    float: right;
     padding-right: 12px;
     padding-bottom: 12px;
 }
@@ -335,6 +362,28 @@ body {
     padding-right: 12px;
     padding-bottom: 6px;
     line-height: 100%;
+}
+
+.article-container:hover .quote-scroll {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.article-container:hover .quote-attrib span {
+    padding-bottom: 5px;
+    background-color: #EFF6EE;
+    color: #000000;
+
+}
+
+.article-container:hover .quote-subheading {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.article-container:hover .quote-date {
+    background-color: #EFF6EE;
+    color: #000000;
 }
 
 .blog-article-container {
@@ -432,14 +481,12 @@ body {
 .bullet-list-imgs > p {
     border-bottom: 1px solid #99BEB1;
     width: fit-content;
-    background-color: #EEEEEE;
     padding: 5px;
     margin-left: none;
 }
 
 .bullet-list-imgs > div {
     width: fit-content;
-    background-color: #EEEEEE;
     padding: 5px;
     margin-left: none;
 }
@@ -1343,16 +1390,15 @@ h2 {
     position: relative;
     width: 100%;
     min-width: 100%;
-    max-height: 100vh;
     display: inline-block;
 }
 
 .bar-items-container {
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     display: grid;
-    grid-template-columns: 150px 200px;
-    grid-template-rows: 1fr;
+    grid-template-columns: 150px 250px;
+    grid-template-rows: 2fr;
     margin-top: 0px;
     overflow-x: hidden;
     color: #000000;
@@ -1401,9 +1447,9 @@ h2 {
     max-height: 100%;
     grid-column: 1;
     grid-row: 1;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 325%;
     color: #212529;
     text-decoration: none;
@@ -1416,13 +1462,13 @@ h2 {
 
 .bar-item-text-secondary {
     position: relative;
-    max-width: 250px;
-    max-height: 250px;
+    min-width: 120%;
+    max-height: 5px;
     background-color: #FFFFFF;
     display: inline-block;
     grid-column: 2;
     grid-row: 1;
-    overflow: hidden;
+    overflow-y: scroll;
     text-align: center;
 }
 
@@ -1451,6 +1497,17 @@ h2 {
     text-decoration: none;
     text-align: left;
     max-width: 70%;
+}
+
+.go-label-index {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    font-size: 11.5px;
+    color: rgba(250, 250, 207, 0);
+    background-color: #ffffff;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: left;
 }
 
 @media(hover: hover) and (pointer: fine) {
