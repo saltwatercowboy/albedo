@@ -1513,11 +1513,11 @@ h2 {
 @media(hover: hover) and (pointer: fine) {
     .bar-items-container:hover {
         overflow: visible;
-        background-color: #000000;
+        background-color: #99BEB1;
     }
     
     #bar-items-about-container:hover {
-        background-color: #000000;
+        background-color: #99BEB1;
     }
     
     .bar-items-container:hover .bar-item-text {
